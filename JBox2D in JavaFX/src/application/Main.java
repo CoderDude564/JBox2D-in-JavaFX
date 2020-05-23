@@ -39,7 +39,7 @@ public class Main extends Application {
 		world.createWorld();
 		world.createMouseJoint(root);
 
-		new Box(width / 2, 0, width, 20, BodyType.DYNAMIC, 0, 1, 0.5f, 0.4f, Color.gray(0.7, 0.1), "Platform", world, root);
+		new Box(width / 2, 0, 50, 50, BodyType.DYNAMIC, 0, 1, 0.5f, 0.4f, Color.gray(0.7), "Platform", world, root);
 		Box platform = new Box(width / 2, height - 10, width, 20, BodyType.STATIC, 0, 1, 0.5f, 0.4f, Color.gray(0.7, 0.1), "Platform", world, root);
 		world.setGroundBody(platform.getMainBody());
 		

@@ -24,7 +24,7 @@ public class Box2DHelper {
 	private Body groundBody;
 	public ArrayList<Displayable> displayObjects;
 	public World world;
-	public Box2DContactListener contactListener;
+	public ContactListener contactListener;
 	public MouseSpring mouseSpring;
 	
 	public Box2DHelper(float width, float height) {
@@ -45,13 +45,6 @@ public class Box2DHelper {
 	
 	public void listenForCollisions(ContactListener contactListener) {
 		this.world.setContactListener(this.contactListener);
-	}
-	
-	public void listenForCollisions(Class<?> parent) {
-		
-		this.contactListener = new Box2DContactListener(parent);
-		this.world.setContactListener(this.contactListener);
-		
 	}
 	
 	public void setScaleFactor(float scaleFactor) {
